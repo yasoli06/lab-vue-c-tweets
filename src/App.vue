@@ -1,9 +1,3 @@
-<template>
-  <div class="app">
-    <Tweet />
-  </div>
-</template>
-
 <script setup>
   import { ref } from 'vue';
   import Tweet from './components/Tweet.vue';
@@ -38,6 +32,16 @@
     }
 ]);
 </script>
+
+<template>
+  <div class="app">
+    <Tweet :tweet="tweets[0]" />
+    <Tweet :tweet="tweets[1]" />
+    <Tweet :tweet="tweets[2]" />
+  </div>
+</template>
+
+
 
 <style>
   body {
@@ -166,5 +170,6 @@
     justify-content: space-between;
     color: #536471;
   }
+
 
 </style>
